@@ -1,0 +1,9 @@
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+a {
+    color: lightseagreen;
+    text-decoration: lime;
+    text-shadow: mediumblue;
+}
