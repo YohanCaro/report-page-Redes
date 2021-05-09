@@ -106,8 +106,9 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Paso 1</h5>
-                    <p class="card-text">Primero se creó una máquina virtual en la plataforma Google Cloud. La máquina cuenta con 2 núcleos virtuales, 4GB de RAM y 15 GB de disco. <br>La IP de la red interna se creó por defecto como: 10.128.0.2 y la IP externa como: 34.66.203.99
-                        con firewall de trafico HTTP.</p>
+                    <p class="card-text">Primero se creó una máquina virtual en la plataforma <b>Google Cloud</b>. La máquina cuenta con 2 núcleos virtuales, 4GB de RAM y 15 GB de disco. <br>La IP de la red interna se creó por defecto como: <b>10.128.0.2</b> y la IP externa
+                        como:
+                        <b>34.66.203.99</b> con firewall de trafico HTTP. Luego se instaló el SO <b>Ubuntu Server 20.04</b>.</p>
                     <p class="card-text"><small class="text-muted">Figura 4.1</small></p>
                 </div>
                 <img src="./img/evi_web_1.jpg" class="card-img-bottom" alt="">
@@ -117,16 +118,58 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Paso 2</h5>
-                    <p class="card-text"></p>
+                    <p class="card-text">Se accedió a la máquina virtual por medio de una consola conectadapor ssh. Luego, en la consola se instalaron las herramientas necesarias, en este caso NGINX. <br> El comando <b>sudo apt-get install nginx</b> instala la herramienta.
+                        Aunque antes es recomendable actualizar los paqguetes del SO con <b>sudo apt-get update</b> y después ajustar el firewall con: <b>sudo ufw app list</b>, <b>sudo ufw allow 'Nginx HTTP'</b> <br>Para probar que se instaló correctamente
+                        se ejecuta: <b>systemctl status nginx</b> y si aparece la confirmación de la figura 4.2 significará que el proceso se realizó con éxito.</p>
                     <p class="card-text"><small class="text-muted">Figura 4.2</small></p>
                 </div>
                 <img src="./img/evi_web_2.jpg" class="card-img-bottom" alt="">
             </div>
         </div>
-    </div>
-
-    <div class="card-header bg-transparent border-success">
-        <h2>Resultados</h2>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 3</h5>
+                    <p class="card-text">Se accedió a la carpeta <b>/etc/nginx</b> y se modificó el archivo de configuración de NGINX llamado <b>"nginx.conf"</b> . Se le agregó una configuración http con los sguientes datos <br>Información del servidor: <br>(listen) -> puerto
+                        de escucha
+                        <br>(server_name) -> nombre del dominio (En caso de que se tenga) <br>(root) -> ubicación de la carpeta dónde se ubica la página web que mostrará el servidor <br>(index) -> nombre del archivo html de la página <br>En nuestro caso
+                        utilizamos la ruta <b>/home/web/report-page-Redes</b> y el puerto <b>80</b> que es el que trae por defecto NGINX </p>
+                    <p class="card-text"><small class="text-muted">Figura 4.3</small></p>
+                </div>
+                <img src="./img/evi_web_3.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 4</h5>
+                    <p class="card-text">Se ubicó en la ruta que se selaccionó en el paso 3 de la página web y dónde se añadirá los archivos y documentos de la página web. </p>
+                    <p class="card-text"><small class="text-muted">Figura 4.4</small></p>
+                </div>
+                <img src="./img/evi_web_4.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 5</h5>
+                    <p class="card-text">Para la creación de la página web se utilizó Visual Studio Code con el cuál se edito el código HTML5 y CSS3. También se utilizó Boobstrap5 para el diseño.</p>
+                    <p class="card-text"><small class="text-muted">Figura 4.5</small></p>
+                </div>
+                <img src="./img/evi_web_5.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 6</h5>
+                    <p class="card-text">Des pués de añadir la página en la ruta especificada en el paso 4, en la máquina virtual, se procedió a reiniciar el servicio de NGINX utilizando el comando: <br> <b>sudo systemctl restart nginx</b> <br>Luego se probó la página web
+                        utilizando la dirección IP externa (34.66.203.99) en el navegador.<br></p>
+                    <p class="card-text"><small class="text-muted">Figura 4.6</small></p>
+                </div>
+                <img src="./img/evi_web_6.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
     </div>
 
     <footer>
