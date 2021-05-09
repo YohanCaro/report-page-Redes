@@ -26,7 +26,108 @@
         </div>
     </nav>
 
+    <div class="card-header bg-transparent border-success text-center">
+        <h1>SERVIDOR WEB</h1>
+    </div>
 
+    <div class="card-header bg-transparent border-success">
+        <h2>Conceptos</h2>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Servidor WEB</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Máquina virtual</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Cloud Computing</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Un servidor web es un software que forma parte del servidor y cuya función principal es devolver información (páginas) cuando recibe peticiones por parte de usuarios, y quien permite que usuarios puedan acceder a páginas web.</div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Es un software que se encarga de simular un sistema de computo, con la posibilidad de ejecutar programas como si fuese una computadora real. <br>Se suelen dividir en: <br>Máquinas de sistema: se utilizan para la virtualización de hardward,
+                    lo cual permite que una máquina física pueda multiplicarse en varias máquinas virtuales. <br> Máquinas virtuales de proceso: se ejecutan como un proceso normal dentro de un SO funcionanado como un puente entre un lenguaje de programación
+                    y el SO.<br></div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Servicios de Computación en la Nube Es el conjunto de servicios de tecnología que se ofrecen a través de Internet, que se cobran únicamente por lo que se consume y que están diseñados para dar agilidad a los negocios o personas. Se pueden
+                    encontrar servicios de cómputo, donde los servicios están diseñados para soportar la capa de procesamiento de las aplicaciones. <br> El servicio de almacenamiento ofrece una capacidad de almacenamiento virtualmente ilimitada para los
+                    usuarios, además tiene la posibilidad de replicar la información en múltiples ubicaciones geográficas. Y el servicio de networking en el que se permite virtualizar la capa de red de las soluciones de infraestructura física.
+                </div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-success mb-3">
+        <div class="card-header bg-transparent border-success">
+            <h2>Herramientas y Tecnologías</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/googlecloud.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Cloud</h5>
+                        <p class="card-text">Es una plataforma que ofrece servicios de tecnología de la información, dirigidos a empresas, profesionales de TI y desarrolladores puedan aprovechar para trabajar de forma eficiente, ganar más flexibilidad y/o permitirles una
+                            ventaja estratégica. Cada servicio está disponible para que los usuarios puedan aprovechar los diferentes recursos para desarrollar la infraestructura que necesitan.
+                        </p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/ubuntu_server.png
+                    " class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Ubuntu Server</h5>
+                        <p class="card-text">Es un sistemas operativo de software libre desarrollado por Canonical Fundación Ubuntu. Es una distribución basada en Debian y puede ejecutarse en computadores y servidores. Su principal objetivo era hacer de Debian una distribución
+                            más fácil de usar y entender para los usuarios finales, haciendo más sencillas las gestión de tareas. <br>Cuenta con una gran cantidad de herramientas y programas para la creación de software y el desarrollo.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/ng.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">NGINX</h5>
+                        <p class="card-text">Nginx ​ es un servidor web/proxy inverso ligero de alto rendimiento y un proxy para protocolos de correo electrónico.​​Es software libre y de código abierto, licenciado bajo la Licencia BSD simplificada; también existe una versión
+                            comercial distribuida bajo el nombre de Nginx Plus.​ Está diseñado para ofrecer un bajo uso de memoria y alta concurrencia, usando un enfoque asincrónico basado en eventos.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-header bg-transparent border-success">
+        <h2>Proceso</h2>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 1</h5>
+                    <p class="card-text">Primero se creó una máquina virtual en la plataforma Google Cloud. La máquina cuenta con 2 núcleos virtuales, 4GB de RAM y 15 GB de disco. <br>La IP de la red interna se creó por defecto como: 10.128.0.2 y la IP externa como: 34.66.203.99
+                        con firewall de trafico HTTP.</p>
+                    <p class="card-text"><small class="text-muted">Figura 4.1</small></p>
+                </div>
+                <img src="./img/evi_web_1.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Paso 2</h5>
+                    <p class="card-text"></p>
+                    <p class="card-text"><small class="text-muted">Figura 4.2</small></p>
+                </div>
+                <img src="./img/evi_web_2.jpg" class="card-img-bottom" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="card-header bg-transparent border-success">
+        <h2>Resultados</h2>
+    </div>
 
     <footer>
         Todos los derechos reservados
