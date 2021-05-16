@@ -33,28 +33,32 @@
     <div class="card-header bg-transparent border-success">
         <h2>Conceptos</h2>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Servidor WEB</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Máquina virtual</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Cloud Computing</a>
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
-                </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Servidor WEB</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Máquina virtual</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Cloud Computing</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-protocol" role="tab" aria-controls="settings">Protocolo de transferencia</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-http" role="tab" aria-controls="settings">HTTP</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-web" role="tab" aria-controls="settings">Navegador web</a>
             </div>
-            <div class="col-8">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Un servidor web es un software que forma parte del servidor y cuya función principal es devolver información (páginas) cuando recibe peticiones por parte de usuarios, y quien permite que usuarios puedan acceder a páginas web.</div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Es un software que se encarga de simular un sistema de computo, con la posibilidad de ejecutar programas como si fuese una computadora real. <br>Se suelen dividir en: <br>Máquinas de sistema: se utilizan para la virtualización de hardward,
-                        lo cual permite que una máquina física pueda multiplicarse en varias máquinas virtuales. <br> Máquinas virtuales de proceso: se ejecutan como un proceso normal dentro de un SO funcionanado como un puente entre un lenguaje de programación
-                        y el SO.<br></div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Servicios de Computación en la Nube Es el conjunto de servicios de tecnología que se ofrecen a través de Internet, que se cobran únicamente por lo que se consume y que están diseñados para dar agilidad a los negocios o personas. Se pueden
-                        encontrar servicios de cómputo, donde los servicios están diseñados para soportar la capa de procesamiento de las aplicaciones. <br> El servicio de almacenamiento ofrece una capacidad de almacenamiento virtualmente ilimitada para los
-                        usuarios, además tiene la posibilidad de replicar la información en múltiples ubicaciones geográficas. Y el servicio de networking en el que se permite virtualizar la capa de red de las soluciones de infraestructura física.
-                    </div>
-                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Un servidor web es un software que forma parte del servidor y cuya función principal es devolver información (páginas) cuando recibe peticiones por parte de usuarios, y quien permite que usuarios puedan acceder a páginas web.</div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Es un software que se encarga de simular un sistema de computo, con la posibilidad de ejecutar programas como si fuese una computadora real. <br>Se suelen dividir en: <br>Máquinas de sistema: se utilizan para la virtualización de hardward,
+                    lo cual permite que una máquina física pueda multiplicarse en varias máquinas virtuales. <br> Máquinas virtuales de proceso: se ejecutan como un proceso normal dentro de un SO funcionanado como un puente entre un lenguaje de programación
+                    y el SO.<br></div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Servicios de Computación en la Nube Es el conjunto de servicios de tecnología que se ofrecen a través de Internet, que se cobran únicamente por lo que se consume y que están diseñados para dar agilidad a los negocios o personas. Se pueden
+                    encontrar servicios de cómputo, donde los servicios están diseñados para soportar la capa de procesamiento de las aplicaciones. <br> El servicio de almacenamiento ofrece una capacidad de almacenamiento virtualmente ilimitada para los
+                    usuarios, además tiene la posibilidad de replicar la información en múltiples ubicaciones geográficas. Y el servicio de networking en el que se permite virtualizar la capa de red de las soluciones de infraestructura física.
                 </div>
+                <div class="tab-pane fade" id="list-http" role="tabpanel" aria-labelledby="list-settings-list">Es el <b>Protocolo de transferencia de hipertexto</b>, el cual es un protocolo de comunicación que permite las transferencias de información por medio de archivos XHML o HTML (entre los más usados), creados por la World Wide Web (WWWW).
+                    <br>Se puede decir que es el código que establece la conexión para que el servidor y el cliente puedan hablar un mismo idioma al momento de transmitir la información. <br>Funciona estableciendo las pautas a seguir, los métodos de petición
+                    y tiene flexibilidad para incorporar nuevas peticiones.</div>
+                <div class="tab-pane fade" id="list-protocol" role="tabpanel" aria-labelledby="list-settings-list">Es un sistema de reglas utilizados para la comunicación entre dos o más puntos conectadops a una red. Se trata del estándar que define la sintaxis, semántica y sincronización de la comunicación</div>
+                <div class="tab-pane fade" id="list-web" role="tabpanel" aria-labelledby="list-settings-list">Es un software, aplicación o programa que permite el acceso a la Web, interpretando la información de distintos tipos de archivos y sitios web para que puedan ser visitados.</div>
             </div>
         </div>
     </div>
@@ -63,41 +67,39 @@
         <div class="card-header bg-transparent border-success">
             <h2>Herramientas y Tecnologías</h2>
         </div>
-        <div class="card-body">
-            <div class="row row-cols-1 row-cols-md-3">
-                <div class="col mb-4">
-                    <div class="card">
-                        <img src="./img/googlecloud.png" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Google Cloud</h5>
-                            <p class="card-text">Es una plataforma que ofrece servicios de tecnología de la información, dirigidos a empresas, profesionales de TI y desarrolladores puedan aprovechar para trabajar de forma eficiente, ganar más flexibilidad y/o permitirles una
-                                ventaja estratégica. Cada servicio está disponible para que los usuarios puedan aprovechar los diferentes recursos para desarrollar la infraestructura que necesitan.
-                            </p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/googlecloud.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Cloud</h5>
+                        <p class="card-text">Es una plataforma que ofrece servicios de tecnología de la información, dirigidos a empresas, profesionales de TI y desarrolladores puedan aprovechar para trabajar de forma eficiente, ganar más flexibilidad y/o permitirles una
+                            ventaja estratégica. Cada servicio está disponible para que los usuarios puedan aprovechar los diferentes recursos para desarrollar la infraestructura que necesitan.
+                        </p>
+                        <a href="https://cloud.google.com/" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
-                <div class="col mb-4">
-                    <div class="card">
-                        <img src="./img/ubuntu_server.png
-                        " class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Ubuntu Server</h5>
-                            <p class="card-text">Es un sistemas operativo de software libre desarrollado por Canonical Fundación Ubuntu. Es una distribución basada en Debian y puede ejecutarse en computadores y servidores. Su principal objetivo era hacer de Debian una distribución
-                                más fácil de usar y entender para los usuarios finales, haciendo más sencillas las gestión de tareas. <br>Cuenta con una gran cantidad de herramientas y programas para la creación de software y el desarrollo.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/ubuntu_server.png
+                    " class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Ubuntu Server</h5>
+                        <p class="card-text">Es un sistemas operativo de software libre desarrollado por Canonical Fundación Ubuntu. Es una distribución basada en Debian y puede ejecutarse en computadores y servidores. Su principal objetivo era hacer de Debian una distribución
+                            más fácil de usar y entender para los usuarios finales, haciendo más sencillas las gestión de tareas. <br>Cuenta con una gran cantidad de herramientas y programas para la creación de software y el desarrollo.</p>
+                        <a href="https://ubuntu.com/server" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
-                <div class="col mb-4">
-                    <div class="card">
-                        <img src="./img/ng.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">NGINX</h5>
-                            <p class="card-text">Nginx ​ es un servidor web/proxy inverso ligero de alto rendimiento y un proxy para protocolos de correo electrónico.​​Es software libre y de código abierto, licenciado bajo la Licencia BSD simplificada; también existe una versión
-                                comercial distribuida bajo el nombre de Nginx Plus.​ Está diseñado para ofrecer un bajo uso de memoria y alta concurrencia, usando un enfoque asincrónico basado en eventos.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./img/ng.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">NGINX</h5>
+                        <p class="card-text">Nginx ​ es un servidor web/proxy inverso ligero de alto rendimiento y un proxy para protocolos de correo electrónico.​​Es software libre y de código abierto, licenciado bajo la Licencia BSD simplificada; también existe una versión
+                            comercial distribuida bajo el nombre de Nginx Plus.​ Está diseñado para ofrecer un bajo uso de memoria y alta concurrencia, usando un enfoque asincrónico basado en eventos.</p>
+                        <a href="https://www.nginx.com/" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -173,6 +175,19 @@
                 </div>
                 <img src="./img/evi_web_6.jpg" class="card-img-bottom" alt="">
             </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h1>Referencias</h1>
+            <p>https://concepto.de/http/</p>
+            <p>www.mozilla.org/es-ES/firefox/browsers/what-is-a-browser/</p>
+            <p>https://es.ryte.com/wiki/Protocolo_de_Transferencia_de_Archivos</p>
+            <p>https://cloud.google.com/</p>
+            <p>https://www.pragma.com.co/blog/que-es-y-para-que-sirve-la-computacion-en-l a-nube</p>
+            <p>https://www.acronis.com/es-mx/articles/google-cloud-platform/</p>
+            <p>https://www.webempresa.com/hosting/que-es-servidor-web.html</p>
         </div>
     </div>
 
