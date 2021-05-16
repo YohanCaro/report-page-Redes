@@ -26,6 +26,185 @@
         </div>
     </nav>
 
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1>SERVIDOR DNS</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card border-success">
+                    <div class="card-header border-success bg-transparent">
+                        <div class="card-title">
+                            <h4>Concepto</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <p>
+                            El DNS es un sistema de nombres para computadores, el cual traduce una dirección IP a una dirección legible por humanos. Este proceso es la columna vertebral de Internet. <br>
+                            Cada sistema operativo tiene una copia de la tabla de nombres de host y dirección IP, en Linux esa tabla es el archivo <strong>/etc/hosts</strong>, el sistema consultará este archivo antes que el servidor DNS, asi que si existe, va a tomarlo como el nombre de la dirección.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-success">
+                    <div class="card-header bg-transparent border-success">
+                        <div class="card-title">
+                            <h4>Tipos de servidores DNS</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Servidores DNS primarios: </strong> Contienen los archivos de configuración del dominio y responden a las consultas DNS.</li>
+                            <li><strong>Servidor DNS secundario: </strong> funcionan como una copia de seguridad y distribución de carga. Los servidores primarios conocen la existencia de los servidores de nombres secundarios y les envían actualizaciones.</li>
+                            <li><strong>Almacenamiento en caché del servidor DNS: </strong> lo único que hacen es almacenar en caché las respuestas DNS para que no tengas que volver a preguntar al servidor DNS principal o secundario.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-12">
+                <div class="card border-success">
+                    <div class="card-header border-success bg-transparent">
+                        <div class="card-title">
+                            <h4>Tecnología</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                       <div class="row">
+                           <div class="col-lg-10">
+                                <p>
+                                    En la mayoría de servidores del mundo se utiliza <strong>BIND</strong>, un servidor DNS. Y de manera similar a como funciona el archivo que contiene la tabla DNS del sistema operativo, este se configura colocando los distintos nombres para ser consumido. <br> <br>
+                                    A partir de configuraciones de zonas de dominios y subdominios se pretende conformar una tabla para, por ejemplo una red interna.
+                                </p>
+                           </div>
+
+                           <div class="col-lg-2">
+                               <img src="img/BIND9.png" class="w-100">
+                           </div>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="card border-success">
+                    <div class="card-header border-success bg-transparent">
+                        <div class="card-title">
+                            <h4>Proceso</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                       <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 1</h5>
+                                        <p>
+                                            Se debe instalar bind9 en la maquina virtual de Linux con el comando: <br>
+                                            <code>sudo atp-get install bind9</code><br>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 2</h5>
+                                        <p>
+                                            En el archivo con ruta <strong>/etc/bind/named.conf.options</strong> se debe editar el valor forwarders de manera que esté así.<br>
+                                        </p>
+                                        <img src="img/dns/1.png" class="w-100">
+                                   </div>
+                               </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 3</h5>
+                                        <p>
+                                            En el archivo con ruta <strong>/etc/resolv.conf</strong> de manera similar, se debe editar el valor nameserver esta vez siendo la IP de la máquina.<br>
+                                        </p>
+                                        <img src="img/dns/2.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 4</h5>
+                                        <p>
+                                            En el archivo con ruta <strong>/etc/hostname</strong> muestra el nombre del host de la maquina.
+                                        </p>
+                                        <img src="img/dns/3.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                 <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 5</h5>
+                                        <p>
+                                             En el archivo con ruta <strong>/etc/hosts</strong> se configura manualmente el nombre de cada IP, asi se utiliza redes.uptc.edu.co.
+                                        </p>
+                                        <img src="img/dns/4.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 6</h5>
+                                        <p>
+                                            En el archivo con ruta <strong>/etc/bind/named.conf.local</strong> se debe agregar una nueva zona de acceso. Utilizando <u>redes.uptc.edu.co</u> para el nombre de esa zona y apuntando a su archivo de configuracion en <strong>/var/cache/bind/zones/db.redes.uptc.edu.co</strong>
+                                        </p>
+                                        <img src="img/dns/5.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 7</h5>
+                                        <p>
+                                            En el archivo con ruta <strong>/var/cache/bind/zones/db.redes.uptc.edu.co</strong> se debe configurar la zona, apuntando en todos los casos a la IP de la máquina, ademas de colocar el nombre que ya ha sido utilizado antes <u>redes.uptc.edu.co</u>
+                                        </p>
+                                        <img src="img/dns/6.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 8</h5>
+                                        <p>
+                                            De esta manera, se llega al punto de probar. Para esto se puede realizar un PING hacia el nombre que se ha configurado <code>ping redes.uptc.uptc.co</code>
+                                        </p>
+                                        <img src="img/dns/7.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 9</h5>
+                                        <p>
+                                             Otra manera para probar el funcionamiento del servidor <code>nslookup redes.uptc.uptc.co</code>
+                                        </p>
+                                        <img src="img/dns/8.png" class="w-100">
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Paso 10</h5>
+                                        <p>
+                                             Y otra manera más para verificar que funciona es la interfaz del SO
+                                        </p>
+                                        <img src="img/dns/9.png" class="w-100">
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <footer>
