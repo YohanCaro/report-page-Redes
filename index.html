@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Proyecto Redes </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-uppercase">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark text-uppercase sticky-top" style="background-color: #27515E">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Rasho</a>
+        <a class="navbar-brand" href="/">REDES DE DATOS</a>
         <div class="collapse navbar-collapse" id="navbarText">
             <div class="navbar-nav mr-auto ml-auto text-center">
                 <a class="nav-item nav-link active" href="#">Inicio</a>
@@ -26,63 +28,252 @@
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h2 class="display-6">Informe Proyecto Redes</h2>
-            <p class="lead">En la presente página web se presenta la info de los servidores, evidencia anexos y demás.</p>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+
+            <h1 class="text-center text-primary m-4">INFORME REDES DE DATOS</h1>
+            <p class="text-center">La presente página tiene como fin exponer la instalación, configuración y puesta en
+                marcha de servidores DHCP, DNS y WEB.</p>
+            <div class="row justify-content-center">
+                <img src="img/server.jpg" class="w-50" alt="">
+            </div>
+        </div>
+
+        <div class="card text-center border-info">
+            <div class="card-body">
+                <div class="bg-info card-title p-2 rounded shadow">
+                    <h3 class="text-white">Equipo de trabajo</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col ">Código</th>
+                                <th scope="col ">Nombres</th>
+                                <th scope="col ">Apellidos</th>
+                                <th scope="col ">Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row ">201710379</th>
+                                <td>Yohan Eduardo</td>
+                                <td>Caro Pongutá</td>
+                                <td>Líder / desarrolador</td>
+                            </tr>
+                            <tr>
+                                <th scope="row ">201710257</th>
+                                <td>Andrés Felipe</td>
+                                <td>Chaparro Rosas</td>
+                                <td>Consultor de recursos y herramientas / desarrollador</td>
+                            </tr>
+                            <tr>
+                                <th scope="row ">201710254</th>
+                                <td>Fabian Alejandro</td>
+                                <td>Cristancho Rincón</td>
+                                <td>Tester / analista / desarrollador</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card text-center border-info my-4">
+            <div class="card-body">
+                <div class="bg-info card-title p-2 rounded shadow">
+                    <h3 class="text-white">Cronograma de Actividades</h3>
+                </div>
+                <p class="mt-3">A continuación se presenta el cronograma de actividades que se tuvo en cuenta para la
+                    realización del informe</p>
+                <div class="row justify-content-center">
+                    <img src="img/cronograma.jpg" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-info mb-4 p-3">
+            <div class="bg-info card-title p-2 rounded shadow">
+                <h3 class="text-white text-center">Herramientas de Virtualización Seleccionadas</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Para llevar a cabo la instalación de los recursos necesarios, se va a hacer uso del software de
+                        virtualización <b>Virtualbox</b>, el cual permite virtualizar diferentes máquinas que funcionan
+                        para cualquier sistema operativo.
+                    </p>
+                    <p>Debido a que se van a poner en marcha servidores, el grupo de trabajo decidió que para que dicha
+                        implementación esté más cerca a la administración de servidores llevada a cabo en el mercado
+                        laboral, se va a usar la distribución de linux Ubuntu Desktop tanto para el servidor como para
+                        el cliente.</p>
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <img src="img/vbox.png" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/ubuntu.png" class="w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-info mb-4 p-3">
+            <div class="bg-info card-title p-2 rounded shadow">
+                <h3 class="text-white text-center">Configuración de la red interna</h3>
+            </div>
+            <p>Para la correcta configuración y puesta en marcha de los servidores, es necesario crear una red interna
+                que permita una correcta comunicación y transferenia entre clientes y servidor.</p>
+            <p>A continuación se presenta el paso a paso para la configuración de la red interna en <b>Virtual Box</b>
+            </p>
+            <h3 class="text-info">Paso 1</h3>
+            <hr>
+            <p>En <b>Virtual Box</b>, ingresar a <code>Archivo > Preferencias</code></p>
+            <img src="img/intern/intern1.png" class="w-100" alt="">
+
+            <br>
+            <h3 class="text-info">Paso 2</h3>
+            <hr>
+            <p>En la ventana que se abre, crear una nueva red interna con dirección de red que se quiere utilizar, para
+                el caso <b>10.0.2.0</b></p>
+            <img src="img/intern/create-intern.PNG" class="w-100" alt="">
+
+            <br>
+            <h3 class="text-info">Paso 3</h3>
+            <hr>
+            <p>Entrar a la configuración de red del servidor, y asignar la red interna que se acabó de crear. Verificar
+                que no haya otro tipo de red habilitado</p>
+            <img src="img/intern/intern-server.PNG" alt="" class="w-100">
+
+            <br>
+            <h3 class="text-info">Paso 4</h3>
+            <hr>
+            <p>Igual que en el paso anterior, entrar a la configuración de red del cliente, y asignar la red interna que
+                se acabó de crear. Verificar que no haya otro tipo de red habilitado</p>
+            <img src="img/intern/intern-client.PNG" alt="" class="w-100">
+
+            <br>
+            <h3 class="text-info">Paso 5</h3>
+            <hr>
+            <p>Activar la máquina y realizar los pasos necesarios para la configuración y puesta en marcha de los
+                servidores</p>
+        </div>
+
+        <div class="card border-info mb-4 p-3">
+            <div class="bg-info card-title p-2 rounded shadow">
+                <h3 class="text-white text-center">Servidores</h3>
+            </div>
+            <p>Para la implementación del proyecto, se presenta a continuación los servidores que se debían tener en
+                cuenta</p>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="text-center text-primary">
+                                Servidor DHCP
+                            </h2>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/dhcp/dhcp.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="card-body">
+                            <br>
+                            <p class="text-justify">Es un servidor de red que permite la asignación automática de
+                                direcciones IP, gateways predeterminadas y otros parámetros de red necesarios para los
+                                clientes.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="dhcp.html" class="btn btn-primary btn-block">
+                                Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="text-center text-primary">
+                                Servidor DNS
+                            </h2>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/dns/dns.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="text-justify">Es un sistema de nombres para computadores, el cual traduce una
+                                dirección IP a una dirección legible por humanos. Este proceso es la columna vertebral
+                                de Internet.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="dns.html" class="btn btn-primary btn-block">
+                                Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="text-center text-primary">
+                                Servidor WEB
+                            </h2>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/web.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="text-justify">Es un software que forma parte del servidor y cuya función principal
+                                es devolver información (páginas) cuando recibe peticiones por parte de usuarios, que
+                                permite acceder a páginas web.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="web.html" class="btn btn-primary btn-block">
+                                Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-info mb-4 p-3">
+            <div class="bg-info card-title p-2 rounded shadow">
+                <h3 class="text-white text-center">Documento Planificación</h3>
+            </div>
+            <p>En el siguiente botón se podrá visualizar el <b>Documento de Planificación</b> presentado anteriormente
+            </p>
+            <p>En este documento se presenta la información inicial del proyecto, esto con el fin de entender de mejor
+                manera la página web</p>
+            <a href="static/planification.pdf" target="_blank" class="btn btn-primary">Visualizar</a>
+        </div>
+
+        <div class="card border-info mb-4 p-3">
+            <div class="bg-info card-title p-2 rounded shadow">
+                <h3 class="text-white text-center">Conclusiones</h3>
+            </div>
+            <p>Con el proyecto de instalación, configuración y puesta en marcha se aprendieron conceptos propios de los
+                servidores DHCP, DNS y WEB, así como el funcionamiento a bajo nivel y la forma de abordar los diferentes
+                problemas que se pueden llegar a presentar en el ámbito empresarial.</p>
+            <p>De igual manera, el uso de una distribución Linux para poner en marcha los servidores permitió tener un
+                mayor acercamiento a las configuraciones de servidores y archivos de configuración necesarios para que
+                su administración se realice correctamente.</p>
+            <p>El uso de un servicio cloud para la instalación, configuración y puesta en marcha de un servidor web
+                permite que recursos como la página web en cuestión se expongan al público en general, con el fin de que
+                se pueda compartir información y compartirla con cualquier persona en cualquier parte del mundo.</p>
         </div>
     </div>
 
-    <div class="card text-center">
-        <div class="card-body">
-            <h3>Equipo</h3>
-            <table class="table table-hover">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col ">Código</th>
-                        <th scope="col ">Nombres</th>
-                        <th scope="col ">Apellidos</th>
-                        <th scope="col ">Rol</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row ">201710254</th>
-                        <td>Andrés Felipe</td>
-                        <td>Chaparro Rosas</td>
-                        <td>Consultor de recursos y herramientas / desarrollador</td>
-                    </tr>
-                    <tr>
-                        <th scope="row ">201710257</th>
-                        <td>Fabian Alejandro</td>
-                        <td>Cristancho Rincón</td>
-                        <td>Tester / analista / desarrollador</td>
-                    </tr>
-                    <tr>
-                        <th scope="row ">201710379</th>
-                        <td>Yohan Eduardo</td>
-                        <td>Caro Pongutá</td>
-                        <td>Líder / desarrolador</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="card w-50">
-        <div class="card-body">
-            <h5 class="card-title">Planificación</h5>
-            <p class="card-text">En el siguiente enlace puede descargar la planificaión del proyecto en formato .pdf.</p>
-            <a href="#" class="btn btn-primary">Descargar</a>
-        </div>
-    </div>
-
-    <footer>
-        Todos los derechos reservados
+    <footer style="background-color: #27515E;" class="p-3">
+        <p class="text-center text-white">Redes de Datos &copy; 2020 - Todos los derechos reservados</p>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js " integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin=" anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js "
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin=" anonymous "></script>
     <script src="js/bootstrap.min.js "></script>
 </body>
 

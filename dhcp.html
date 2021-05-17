@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-uppercase ">
+    <nav class="navbar navbar-expand-md navbar-dark text-uppercase  sticky-top" style="background-color: #27515E">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Rasho</a>
+        <a class="navbar-brand" href="/">REDES DE DATOS</a>
         <div class="collapse navbar-collapse" id="navbarText">
             <div class="navbar-nav mr-auto ml-auto text-center">
                 <a class="nav-item nav-link text-white" href="index.html">Inicio</a>
@@ -69,22 +69,50 @@
                 <div class="card-body row">
                     <div class="col-4">
                         <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action active " id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Difusión amplia o broadcast</a>
-                            <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Oferta</a>
-                            <a class="list-group-item list-group-item-action " id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Solicitud</a>
-                            <a class="list-group-item list-group-item-action " id="list-settings-list" data-toggle="list" href="#list-protocol" role="tab" aria-controls="settings">Confirmación</a>
+                            <a class="list-group-item list-group-item-action active " id="list-home-list"
+                                data-toggle="list" href="#list-home" role="tab" aria-controls="home">Difusión amplia o
+                                broadcast</a>
+                            <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list"
+                                href="#list-profile" role="tab" aria-controls="profile">Oferta</a>
+                            <a class="list-group-item list-group-item-action " id="list-messages-list"
+                                data-toggle="list" href="#list-messages" role="tab"
+                                aria-controls="messages">Solicitud</a>
+                            <a class="list-group-item list-group-item-action " id="list-settings-list"
+                                data-toggle="list" href="#list-protocol" role="tab"
+                                aria-controls="settings">Confirmación</a>
                         </div>
                     </div>
                     <div class="col-8">
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">El cliente DHCP envía un paquete <i>DHCPDISCOVER</i> a la dirección <b>255.255.255.255</b> desde la dirección <b>0.0.0.0</b>. De este modo se intenta establecer una comunicación con todos los integrantes de la red, la idea de fondo es localizar los servidores DHCP disponibles y así continuar con la petición.
+                            <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                                aria-labelledby="list-home-list">El cliente DHCP envía un paquete <i>DHCPDISCOVER</i> a
+                                la dirección <b>255.255.255.255</b> desde la dirección <b>0.0.0.0</b>. De este modo se
+                                intenta establecer una comunicación con todos los integrantes de la red, la idea de
+                                fondo es localizar los servidores DHCP disponibles y así continuar con la petición.
                             </div>
-                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Los servidores DHCP presentes en la red se encuentran a la escucha de peticiones a través del puerto <b>67</b>. En cuanto detectan la petición de un cliente envían un paquete <i>DHCPOFFER</i>, que contiene una dirección IP libre, la dirección MAC del cliente y la máscara de subred, así como la dirección IP y el ID del servidor.
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                                aria-labelledby="list-profile-list">Los servidores DHCP presentes en la red se
+                                encuentran a la escucha de peticiones a través del puerto <b>67</b>. En cuanto detectan
+                                la petición de un cliente envían un paquete <i>DHCPOFFER</i>, que contiene una dirección
+                                IP libre, la dirección MAC del cliente y la máscara de subred, así como la dirección IP
+                                y el ID del servidor.
                             </div>
-                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">El cliente DHCP que recibe el paquete contacta con el servidor correspondiente con <i>DHCPREQUEST</i>. De este modo, los demás servidores quedan enterados de la asignación al mismo tiempo que el cliente confirma al servidor que acepta los parámetros asignados anteriormente.
+                            <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                                aria-labelledby="list-messages-list">El cliente DHCP que recibe el paquete contacta con
+                                el servidor correspondiente con <i>DHCPREQUEST</i>. De este modo, los demás servidores
+                                quedan enterados de la asignación al mismo tiempo que el cliente confirma al servidor
+                                que acepta los parámetros asignados anteriormente.
                             </div>
-                            <div class="tab-pane fade" id="list-http" role="tabpanel" aria-labelledby="list-settings-list">Para finalizar, el servidor confirma los parámetros <b>TCP/IP</b> y los envía de nuevo al cliente, esta vez con el paquete <i>DHCPACK</i> (DHCP acknowledged o «reconocido»). La dirección asignada se guarda en la base de datos del servidor junto con la dirección MAC del cliente.</div>
-                            <div class="tab-pane fade" id="list-protocol" role="tabpanel" aria-labelledby="list-settings-list">Para finalizar, el servidor confirma los parámetros <b>TCP/IP</b> y los envía de nuevo al cliente, esta vez con el paquete <i>DHCPACK</i> (DHCP acknowledged o «reconocido»). La dirección asignada se guarda en la base de datos del servidor junto con la dirección MAC del cliente.</div>
+                            <div class="tab-pane fade" id="list-http" role="tabpanel"
+                                aria-labelledby="list-settings-list">Para finalizar, el servidor confirma los parámetros
+                                <b>TCP/IP</b> y los envía de nuevo al cliente, esta vez con el paquete <i>DHCPACK</i>
+                                (DHCP acknowledged o «reconocido»). La dirección asignada se guarda en la base de datos
+                                del servidor junto con la dirección MAC del cliente.</div>
+                            <div class="tab-pane fade" id="list-protocol" role="tabpanel"
+                                aria-labelledby="list-settings-list">Para finalizar, el servidor confirma los parámetros
+                                <b>TCP/IP</b> y los envía de nuevo al cliente, esta vez con el paquete <i>DHCPACK</i>
+                                (DHCP acknowledged o «reconocido»). La dirección asignada se guarda en la base de datos
+                                del servidor junto con la dirección MAC del cliente.</div>
                         </div>
                     </div>
                 </div>
@@ -102,8 +130,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-9">
-                            <p>En la configuración y administración de servidores de ámbito educativo y empresarial, una de las tecnologías más usadas es <b>isc-dhcp-server</b>, una solución completa de código abierto para implementar servidores DHCP, agentes de retransmisión y clientes.</p>
-                            <p>Teniendo una correcta configuración del servidor dentro de una red, es posible asignar automáticamente direcciones IP a todos los clientes que se conecten a dicha red.</p>
+                            <p>En la configuración y administración de servidores de ámbito educativo y empresarial, una
+                                de las tecnologías más usadas es <b>isc-dhcp-server</b>, una solución completa de código
+                                abierto para implementar servidores DHCP, agentes de retransmisión y clientes.</p>
+                            <p>Teniendo una correcta configuración del servidor dentro de una red, es posible asignar
+                                automáticamente direcciones IP a todos los clientes que se conecten a dicha red.</p>
                         </div>
                         <div class="col-lg-3">
                             <img src="img/dhcp//isc-dhcp-server.jpg" class="w-100">
@@ -128,14 +159,16 @@
 
                 <h3 class="text-primary">Paso 1</h3>
                 <hr>
-                <p>Se debe instalar el servidor <b>dhcp-isc-server</b> en una máquina virtual de linux, con el comando: </p>
+                <p>Se debe instalar el servidor <b>dhcp-isc-server</b> en una máquina virtual de linux, con el comando:
+                </p>
                 <p class="text-center"><code>sudo apt-get install isc-dhcp-server</code></p>
                 <img src="img/dhcp/instalacion.PNG" alt="" class="m-auto w-100">
 
                 <br><br>
                 <h3 class="text-primary">Paso 2</h3>
                 <hr>
-                <p>Se asigna una dirección IP estática en la máquina que va a operar como servidor DHCP. Para nuestro caso, se le asignó la IP <b>10.0.2.2</b></p>
+                <p>Se asigna una dirección IP estática en la máquina que va a operar como servidor DHCP. Para nuestro
+                    caso, se le asignó la IP <b>10.0.2.2</b></p>
                 <div class="row m-0 p-0">
                     <div class="col-md-6">
                         <img src="img/dhcp//static1.PNG" alt="" class="w-100">
@@ -169,13 +202,16 @@
                 <br><br>
                 <h3 class="text-primary">Paso 5</h3>
                 <hr>
-                <p>Verificar la interfaz de red que tomó las configuraciones realizadas anteriormente con ayuda del comando <code>ifconfig</code></p>
+                <p>Verificar la interfaz de red que tomó las configuraciones realizadas anteriormente con ayuda del
+                    comando <code>ifconfig</code></p>
                 <img src="img/dhcp/interfaz.PNG" class="w-100" alt="">
-                <p>Como se aprecia en la imagen anterior, la interfaz de red que tomó la configuración es <b>enp0s3</b></p>
+                <p>Como se aprecia en la imagen anterior, la interfaz de red que tomó la configuración es <b>enp0s3</b>
+                </p>
 
                 <h3 class="text-primary">Paso 6</h3>
                 <hr>
-                <p>Modificar el archivo ubicado en <code>/etc/default/isc-dhcp-server</code> y asignar la interfaz enp0s3 en el apartado <b>INTERFACESv4</b></p>
+                <p>Modificar el archivo ubicado en <code>/etc/default/isc-dhcp-server</code> y asignar la interfaz
+                    enp0s3 en el apartado <b>INTERFACESv4</b></p>
                 <img src="img/dhcp/dhcp-config-interfaz.PNG" class="w-100" alt="">
 
                 <br><br>
@@ -187,25 +223,32 @@
                 <br><br>
                 <h3 class="text-primary">Paso 8</h3>
                 <hr>
-                <p>Verificar el estado del servicio con el comando <code>sudo systemctl status isc-dhcp-server</code></p>
+                <p>Verificar el estado del servicio con el comando <code>sudo systemctl status isc-dhcp-server</code>
+                </p>
                 <img src="img/dhcp/status-dhcp.PNG" class="w-100" alt="">
 
                 <br><br>
                 <h3 class="text-primary">Paso 9</h3>
                 <hr>
-                <p>Encender la máquina virtual del cliente y verificar la dirección IPv4 que le asignó el servidor DHCP</p>
+                <p>Encender la máquina virtual del cliente y verificar la dirección IPv4 que le asignó el servidor DHCP
+                </p>
                 <img src="img/dhcp/dhcp-client.PNG" alt="" class="w-100">
                 <br>
-                <p>Como se aprecia, el cliente tomó la dirección IP <b>10.0.2.15</b>, la cual se encuentra dentro del rango de direcciones asignado por el servidor DHCP</p>
+                <p>Como se aprecia, el cliente tomó la dirección IP <b>10.0.2.15</b>, la cual se encuentra dentro del
+                    rango de direcciones asignado por el servidor DHCP</p>
 
                 <br><br>
                 <h3 class="text-primary">Paso 10</h3>
                 <hr>
-                <p>Verificar nuevamente el estado del servidor con el comando <code>sudo systemctl status isc-dhcp-server</code></p>
+                <p>Verificar nuevamente el estado del servidor con el comando
+                    <code>sudo systemctl status isc-dhcp-server</code></p>
                 <img src="img/dhcp/dhcp-final-status.PNG" alt="" class="w-100">
-                <p>Como se aprecia, el cliente se conectó satisfactoriamente al servidor DHCP, y entre ambos comparten peticiones y paquetes <i>DHCPACK</i> y <i>DHCPREQUEST</i>, los cuales fueron necesarios para la correcta asignación de la dirección IP a través de DHCP.</p>
+                <p>Como se aprecia, el cliente se conectó satisfactoriamente al servidor DHCP, y entre ambos comparten
+                    peticiones y paquetes <i>DHCPACK</i> y <i>DHCPREQUEST</i>, los cuales fueron necesarios para la
+                    correcta asignación de la dirección IP a través de DHCP.</p>
                 <br>
-                <p>Con el paso anterior, se concluye que se realizó una correcta instalación, configuración y puesta en marcha del servidor DHCP</p>
+                <p>Con el paso anterior, se concluye que se realizó una correcta instalación, configuración y puesta en
+                    marcha del servidor DHCP</p>
             </div>
         </div>
     </div>
@@ -224,18 +267,20 @@
                         <a href="https://openwebinars.net/blog/que-es-un-servidor-dhcp/">¿Qué es un servidor DHCP?</a>
                     </li>
                     <li>
-                        <a href="https://camber1redes.wordpress.com/configurar-chcp-en-linux/">Configurar DHCP en Linux</a>
+                        <a href="https://camber1redes.wordpress.com/configurar-chcp-en-linux/">Configurar DHCP en
+                            Linux</a>
                     </li>
                     <li>
-                        <a href="https://serviciosgs.readthedocs.io/es/latest/dhcp/ejercicio1.html">Ejercicio: Instalación y configuración del servidor dhcp en linux</a>
+                        <a href="https://serviciosgs.readthedocs.io/es/latest/dhcp/ejercicio1.html">Ejercicio:
+                            Instalación y configuración del servidor dhcp en linux</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <footer>
-        Todos los derechos reservados
+    <footer style="background-color: #27515E;" class="p-3">
+        <p class="text-center text-white">Redes de Datos &copy; 2020 - Todos los derechos reservados</p>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
