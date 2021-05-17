@@ -135,6 +135,101 @@
                 <br><br>
                 <h3 class="text-primary">Paso 2</h3>
                 <hr>
+                <p>Se asigna una dirección IP estática en la máquina que va a operar como servidor DHCP. Para nuestro caso, se le asignó la IP <b>10.0.2.2</b></p>
+                <div class="row m-0 p-0">
+                    <div class="col-md-6">
+                        <img src="img/dhcp//static1.PNG" alt="" class="w-100">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/dhcp/static2.PNG" alt="" class="w-100">
+                    </div>
+                </div>
+
+                <h3 class="text-primary">Paso 3</h3>
+                <hr>
+                <p>Configurar el archivo ubicado en <code>/etc/dhcp/dhcpd.conf</code>.</p>
+                <p>Como características relevantes, este archivo va a contener lo siguiente: </p>
+                <ul>
+                    <li>Dirección de red del servidor</li>
+                    <li>Rango de direcciones IP que se asignarán a los clientes que se conecten a la red interna</li>
+                    <li>Dirección IP del servidor DNS (en caso de haberlo)</li>
+                    <li>Máscara de subred</li>
+                    <li>Dirección de puerta de enlace</li>
+                    <li>Dirección de broadcast</li>
+                    <li>Tiempo de espera del servidor</li>
+                </ul>
+                <img src="img/dhcp/dhcp-conf.PNG" class="w-100" alt="">
+
+                <br><br>
+                <h3 class="text-primary">Paso 4</h3>
+                <hr>
+                <p>Reiniciar el servidor para que tome los cambios</p>
+                <img src="img/dhcp/reboot-dhcp.PNG" class="w-100" alt="">
+
+                <br><br>
+                <h3 class="text-primary">Paso 5</h3>
+                <hr>
+                <p>Verificar la interfaz de red que tomó las configuraciones realizadas anteriormente con ayuda del comando <code>ifconfig</code></p>
+                <img src="img/dhcp/interfaz.PNG" class="w-100" alt="">
+                <p>Como se aprecia en la imagen anterior, la interfaz de red que tomó la configuración es <b>enp0s3</b></p>
+
+                <h3 class="text-primary">Paso 6</h3>
+                <hr>
+                <p>Modificar el archivo ubicado en <code>/etc/default/isc-dhcp-server</code> y asignar la interfaz enp0s3 en el apartado <b>INTERFACESv4</b></p>
+                <img src="img/dhcp/dhcp-config-interfaz.PNG" class="w-100" alt="">
+
+                <br><br>
+                <h3 class="text-primary">Paso 7</h3>
+                <hr>
+                <p>Reiniciar el servidor para que tome los cambios</p>
+                <img src="img/dhcp/reboot-dhcp.PNG" class="w-100" alt="">
+
+                <br><br>
+                <h3 class="text-primary">Paso 8</h3>
+                <hr>
+                <p>Verificar el estado del servicio con el comando <code>sudo systemctl status isc-dhcp-server</code></p>
+                <img src="img/dhcp/status-dhcp.PNG" class="w-100" alt="">
+
+                <br><br>
+                <h3 class="text-primary">Paso 9</h3>
+                <hr>
+                <p>Encender la máquina virtual del cliente y verificar la dirección IPv4 que le asignó el servidor DHCP</p>
+                <img src="img/dhcp/dhcp-client.PNG" alt="" class="w-100">
+                <br>
+                <p>Como se aprecia, el cliente tomó la dirección IP <b>10.0.2.15</b>, la cual se encuentra dentro del rango de direcciones asignado por el servidor DHCP</p>
+
+                <br><br>
+                <h3 class="text-primary">Paso 10</h3>
+                <hr>
+                <p>Verificar nuevamente el estado del servidor con el comando <code>sudo systemctl status isc-dhcp-server</code></p>
+                <img src="img/dhcp/dhcp-final-status.PNG" alt="" class="w-100">
+                <p>Como se aprecia, el cliente se conectó satisfactoriamente al servidor DHCP, y entre ambos comparten peticiones y paquetes <i>DHCPACK</i> y <i>DHCPREQUEST</i>, los cuales fueron necesarios para la correcta asignación de la dirección IP a través de DHCP.</p>
+                <br>
+                <p>Con el paso anterior, se concluye que se realizó una correcta instalación, configuración y puesta en marcha del servidor DHCP</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-12 px-5">
+            <div class="shadow p-3 mb-6 bg-white rounded">
+                <div class="bg-info card-title p-2 rounded shadow">
+                    <h3 class="text-white text-center">Referencias</h3>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://www.netec.com/que-es-dhcp-y-para-que-sirve">¿Qué es DHCP y para qué sirve?</a>
+                    </li>
+                    <li>
+                        <a href="https://openwebinars.net/blog/que-es-un-servidor-dhcp/">¿Qué es un servidor DHCP?</a>
+                    </li>
+                    <li>
+                        <a href="https://camber1redes.wordpress.com/configurar-chcp-en-linux/">Configurar DHCP en Linux</a>
+                    </li>
+                    <li>
+                        <a href="https://serviciosgs.readthedocs.io/es/latest/dhcp/ejercicio1.html">Ejercicio: Instalación y configuración del servidor dhcp en linux</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
